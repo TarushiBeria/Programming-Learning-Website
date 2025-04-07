@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #inputGroupPrepend{
+        background-color: #d2ac6e;
+        color: white;
+    }
+    #inputGroupPrepend:hover{
+        color: gray;
+        background-color: white;
+    }
+    .form{
+        position: fixed;
+        bottom: 10px;
+    }
+    .form{
+        width: 85%;
+    }
+    .message{
+        border: 1px solid gray;
+        border-radius: 10px;
+        word-wrap: break-word;
+    }
+    .message p{
+        color: gray;
+    }
+    .form-control:focus{
+        box-shadow: none;
+        border: 1px solid gray;
+    }
+    .navbarr{
+        background-color: #e5cfab !important;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+    }
+    .navbarr li{
+        margin-left: 35px;
+    }
+    *{
+        font-family: monospace;
+        font-size: 16px;
+    }
+</style>
+<body >
+    <nav class="navbar navbar-expand-lg bg-light navbarr">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CodeFair</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="our_courses.html">Our Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="query_form.html">Query</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="certificates.html">My Certificates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="add_staff.html">Add Staff</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-3">
+        <div class="row mb-5">
+            <div class="col-4 message">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmk,
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 message ms-auto">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmk,
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 message">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmk,
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 message">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmk,
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 message ms-auto">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmk,
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 message">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmk,
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 message">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmk,
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 message">
+                <p>Username</p>
+                ksjdfhzx <br /> lzhdkxncmkekjjsdf,<br>mnueksdjfmceesdkbzx euskdz hx,
+            </div>
+        </div>
+        <div class="row form">
+            <div class="col-12">
+                <div class="input-group">
+                    <!-- <form action="" onsubmit = "return formValidator()"> -->
+                        <input type="text" class="form-control" placeholder="Enter a message" required id="message">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend" type="submit" onclick="return formValidator()">Send</span>
+                        </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function formValidator(){
+        var message = document.getElementById("message");
+
+        if(check(message,"The message length should be in the range of 5 to 100")){
+            document.getElementById("message").value = '';
+            return true;
+        }
+        return false;
+
+        function check(elem,helperMsg){
+            if(elem.value.length>=5 && elem.value.length<=100){
+                return true;
+            }
+            else{
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+    }
+</script>
+</html>

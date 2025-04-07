@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  i{
+    background-color: rgba(0, 0, 0, 0.438) !important;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    position: sticky;
+    left: 1500px;
+    bottom: 30px;
+  }
+  .form{
+    position: absolute;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    left: 630px;
+  }
+  form{
+    position: sticky;
+    top: 350px;
+    z-index: 10;
+    width: 45%;
+  }
+  #sub{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.784);
+    width: 100%;
+    margin-top: 10px;
+  }
+</style>
+<body>
+  <form action="" id="form" onsubmit="return formValidator()">
+    <span class="form">
+      <input type="text" placeholder="Course Name" id="name">
+      <input type="submit" id="sub" value = "Add Course">
+    </span>
+  </form>
+  <nav class="navbar navbar-expand-lg bg-light navbarr">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CodeFair</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="our_courses.html">Our Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="query_form.html">Query</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="certificates.html">My Certificates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add_staff.html">Add Staff</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c1">
+                      <h5 class="card-title">Python</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c2">
+                      <h5 class="card-title">Course 2</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c3">
+                      <h5 class="card-title">Course 3</h5>
+                      <a href="options.html" class="btn">Start Now</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c4">
+                      <h5 class="card-title">Course 4</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c5">
+                      <h5 class="card-title">Course 5</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c6">
+                      <h5 class="card-title">Course 6</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c7">
+                      <h5 class="card-title">Course 7</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c8">
+                      <h5 class="card-title">Course 8</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card cardd" style="width: 18rem;">
+                    <div class="card-body" id="c9">
+                      <h5 class="card-title">Course 9</h5>
+                      <a href="options.html" class="btn">Go Over Again</a>
+                      <a href="questions.html" class="btn">Questions</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <i class="fa-solid fa-plus" onclick="func()"></i>
+    </div>
+</body>
+<script>
+  document.getElementById("form").style.display = "none";
+  function func(){
+    document.getElementById("form").style.display = "block";
+  }
+
+  function formValidator(){
+    var name = document.getElementById("name");
+    
+    if(isAlpha(name,"Please Enter only letters and numbers for the course name")){
+      return true;
+    }
+    return false;
+
+    function isAlpha(elem, helperMsg){    
+      if(elem.value == ''){
+        alert("Please enter the course name");
+      }
+      else{
+        var alphaExp = /^[0-9a-zA-Z ]+$/;   
+        if(elem.value.match(alphaExp)){
+          return true;
+        }else{
+          alert(helperMsg);
+          elem.focus();
+          return false;
+        }
+      }
+    }
+  }
+</script>
+</html>

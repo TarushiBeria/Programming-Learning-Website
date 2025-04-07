@@ -1,0 +1,48 @@
+.icnn{
+    padding: 20px 25px;
+    border-radius: 50%;
+    background-color: lightgray;
+    /* position: relative; */
+    /* width: 50px !; */
+    font-family: monospace;
+    font-weight: bold;
+    float: left;
+}
+.activee{
+    background-color: #d2ac6e;
+}
+.question{
+    background-color: #d2ac6e9e;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+.optionn{
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin-top: 10px;
+    width: 49%;
+    /* margin-right: 10px; */
+}
+.btnn{
+    padding: 10px;
+    text-decoration: none;
+    background-color: lightgray;
+    border-radius: 10px;
+    color: black;
+    margin-top: 50px;
+}
+.navbarr{
+    background-color: #e5cfab !important;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbarr li{
+    margin-left: 35px;
+}
+*{
+    font-family: monospace;
+    font-size: 16px;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<style>
+body{
+    background-color: #e5cfab;
+    font-family: monospace;
+}
+textarea{
+    width: 100% !important;
+}
+.input{
+    background-color: white;
+}
+select,.img,textarea{
+    border: 0px;
+    padding: 30px;
+}
+select{
+    width: 100%;
+    padding-top: 32px;
+}
+.selectt{
+    width: 49%;
+}
+.textt{
+    width: 99.5% !important;
+}
+select,input,textarea{
+    margin-top: 0.5%;
+}
+.subb input{
+    width: 101% !important;
+    background-color: gray;
+    border: none;
+}
+.subb{
+    width: 101.5% !important;
+}
+.subb button{
+    border: 0px !important;
+    background-color: gray;
+    color: white;
+}
+.subb button:hover{
+    border: 0px !important;
+    background-color: white;
+    color: gray;
+}
+.navbarr{
+    background-color: #e5cfab !important;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbarr li{
+    margin-left: 35px;
+}
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light navbarr">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CodeFair</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="our_courses.html">Our Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="query_form.html">Query</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="certificates.html">My Certificates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add_staff.html">Add Staff</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5 pt-5 formm">
+    <h5 class="my-3">Query Form</h5>
+    <form action="" onsubmit="return formValidator()">
+      <div class="row">
+        <div class="col-6 input selectt">
+          <select name="" id="language">
+            <option value="">Select the language</option>
+            <option value="Course 1">Course 1</option>
+            <option value="Course 2">Course 2</option>
+            <option value="Course 3">Course 3</option>
+            <option value="Course 4">Course 4</option>
+          </select>
+        </div>
+        <div class="col-6 img input ms-2">
+          <label for="">Upload an image: </label>
+          <input type="file" id="img">
+        </div>
+        <div class="col-12 input textt mt-2">
+          <textarea name="" rows="4" cols="50" placeholder="Enter the query" id="query"></textarea>
+        </div>
+      </div>
+      <div class="row subb mt-2">
+        <button type="submit" class="py-2">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+<script>
+  function formValidator(){
+    var language = document.getElementById("language");
+    var img = document.getElementById("img");
+    var query = document.getElementById("query");
+    
+    if(notSelect(language, "Please select the language")){
+      if(checkImg(img, "Please select a file with .jpg or .png extension")){
+        if(isEmpty(query, "Please enter the query within the length of 5 to 100 characters")){
+          return true;
+        }
+      }
+    }
+    return false;
+
+    function notSelect(elem, helperMsg){
+      if(elem.value==""){
+        alert("Please select the language");
+        elem.focus();
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+
+    function checkImg(elem, helperMsg){
+      if(elem.value.endsWith(".jpg") || elem.value.endsWith(".png") || elem.value == ""){
+        return true;
+      }
+      else{
+        alert(helperMsg);
+        elem.focus();
+        return false;
+      }
+    }
+
+    function isEmpty(elem, helperMsg){
+      if(elem.value.length>=5 && elem.value.length<=100){
+        return true;
+      }
+      else{
+        alert(helperMsg);
+        elem.focus();
+        return false;
+      }
+    }
+  }
+</script>
+</html>

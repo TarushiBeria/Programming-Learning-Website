@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .navbarr{
+        background-color: #d2ac6e93 !important;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+    }
+    .navbarr li{
+        margin-left: 35px;
+    }
+    *{
+        font-family: monospace;
+        font-size: 16px;
+    }
+    .code{
+        background-color: black;
+        padding: 50px 10px 35px 30px;
+        border-radius: 20px;
+        color: rgb(167, 162, 162);
+        position: relative;
+    }
+    .code p{
+        margin-bottom: 0;
+    }
+    .dots{
+        position: absolute;
+        z-index: 5;
+    }
+    .dot{
+        position: relative;
+        z-index: 5;
+        height: 10px;
+        top: 5px;
+        left: 15px;
+        width: 10px;
+        border-radius: 50%;
+    }
+    .explain{
+        background-color: #e5cfab;
+    }
+    i{
+        background-color: rgba(0, 0, 0, 0.438) !important;
+        color: white;
+        padding: 15px;
+        border-radius: 50%;
+        position: sticky;
+        left: 1500px;
+        bottom: 30px;
+    }
+    .form{
+        position: absolute;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        left: 358px;
+    }
+    form{
+        position: sticky;
+        top: 200px;
+        z-index: 10;
+        width: 45%;
+    }
+    #sub{
+        width: 100%;
+    }
+    textarea{
+        padding: 10px;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light navbarr">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CodeFair</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="our_courses.html">Our Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="query_form.html">Query</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="certificates.html">My Certificates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="add_staff.html">Add Staff</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h3>Topic Name</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <form action="" id="form" onsubmit="return formValidator()">
+            <span class="form">
+              <!-- <input type="text" placeholder="Code"> -->
+                <textarea name="" id="code" placeholder="code" rows="10" cols="55"></textarea><br>
+                <textarea name="" id="code_explain" placeholder="code explaination" rows="5" cols="55"></textarea><br>
+                <input type="submit" id="sub" value = "Add Course">
+            </span>
+        </form>
+        <div class="row">
+            <div class="col-5 m-auto">
+                <div class="dots">
+                    <img src="Images/dot.png" class="dot" alt="">
+                    <img src="Images/dot.png" class="dot" alt="">
+                    <img src="Images/dot.png" class="dot" alt="">
+                </div>
+                <div class="code">
+                    <p>ksjdhmn</p>
+                    <p>ksjdhmn</p>
+                    <p>ksjdhmn</p>
+                </div>
+            </div>
+            <div class="explain mt-3 py-4 mb-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate tenetur dolores deserunt corrupti laudantium quisquam, doloremque eos, cupiditate voluptatibus ducimus velit saepe assumenda vero, reprehenderit numquam aliquid dolore illum.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5 m-auto">
+                <div class="dots">
+                    <img src="Images/dot.png" class="dot" alt="">
+                    <img src="Images/dot.png" class="dot" alt="">
+                    <img src="Images/dot.png" class="dot" alt="">
+                </div>
+                <div class="code">
+                    <p>ksjdhmn</p>
+                    <p>ksjdhmn</p>
+                    <p>ksjdhmn</p>
+                </div>
+            </div>
+            <div class="explain mt-3 py-4 mb-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate tenetur dolores deserunt corrupti laudantium quisquam, doloremque eos, cupiditate voluptatibus ducimus velit saepe assumenda vero, reprehenderit numquam aliquid dolore illum.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5 m-auto">
+                <div class="dots">
+                    <img src="Images/dot.png" class="dot" alt="">
+                    <img src="Images/dot.png" class="dot" alt="">
+                    <img src="Images/dot.png" class="dot" alt="">
+                </div>
+                <div class="code">
+                    <p>ksjdhmn</p>
+                    <p>ksjdhmn</p>
+                    <p>ksjdhmn</p>
+                </div>
+            </div>
+            <div class="explain mt-3 py-4 mb-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate tenetur dolores deserunt corrupti laudantium quisquam, doloremque eos, cupiditate voluptatibus ducimus velit saepe assumenda vero, reprehenderit numquam aliquid dolore illum.</p>
+            </div>
+        </div>
+        <i class="fa-solid fa-plus" onclick="func()"></i>
+    </div>
+    
+    
+</body>
+<script>
+    document.getElementById("form").style.display = "none";
+    function func(){
+        document.getElementById("form").style.display = "block";
+    }
+
+    function formValidator(){
+        var code = document.getElementById("code");
+        var code_explain = document.getElementById("code_explain");
+
+        if(isEmpty(code,"Please enter the code")){
+            if(isEmpty(code_explain,"Please explain the code")){
+                return true;
+            }
+        }
+        return false;
+
+        function isEmpty(elem, helperMsg){
+            if(elem.value == ''){
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    }
+</script>
+</html>

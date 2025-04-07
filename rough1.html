@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Design Homepage</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+ 
+        .hero-section {
+            position: relative;
+            background-image: linear-gradient(#6c6252,#e5cfab);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            overflow: hidden;
+            display: flex; /* Use flexbox */
+            flex-direction: column;
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: 60vh; /* Make it cover 60% of the viewport height */
+        }
+ 
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+ 
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+ 
+        button {
+            background-color: #ffffff;
+            color: #ff4d4d;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+ 
+        button:hover {
+            background-color: #ffe6e6;
+        }
+ 
+        .wave {
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 150%;
+            line-height: 0;
+        }
+ 
+        .wave svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+ 
+        .next-section {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+ 
+        .next-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+ 
+        .next-section p {
+            font-size: 16px;
+            color: #555;
+        }
+        .navbar{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body id="table">
+    <div class="hero-section">
+        <div class="content">
+            <h1>Discover and share the world’s best photos</h1>
+            <p>Get inspired with incredible photos from diverse styles and genres around the world.</p>
+            <button>Sign up</button>
+        </div>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBoox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,256L48,234.7C96,213,192,171,288,165.3C384,160,480,192,576,218.7C672,245,768,267,864,240C960,213,1056,139,1152,96C1248,53,1344,43,1392,37.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </div>
+    <div class="next-section">
+        <h2>What makes us different</h2>
+        <p>We focus on timeless and high-quality photography.</p>
+    </div>
+    <button id="download">Download</button>
+</body>
+<script>
+    document.querySelector('#download').onclick = function(){
+    document.getElementById('download').style.display = "none";
+      var element = document.getElementById('table').innerHTML;
+      html2pdf(element);
+      // alert(element);
+    }
+  </script>
+</html>
+ 
+ 

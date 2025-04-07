@@ -1,0 +1,157 @@
+body{
+    overflow-x:hidden;
+    font-family: monospace;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: monospace;
+}
+#img{
+    background-image: url("../Images/user.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+i{
+    color: #d2ac6e;
+}
+.card{
+    border: 1px solid black !important;
+}
+#gold_hr{
+    border: 1px solid #d2ac6e;
+}
+/* .circlee{
+    position: absolute;
+    padding: 0;
+} */
+/* .circlee{
+    position: absolute;
+    top: 50;
+} */
+.card_img{
+    width: 270px;
+    height: 150px;
+}
+.card h3{
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+}
+/* font-size */
+/* Log In */
+.Log-in{
+    border: 1px solid black;
+    margin-left: -50px;
+    height: 650px;
+    border-radius: 20px;
+}
+.sign-up{
+    border: 1px solid black;
+    margin-left: 800px;
+    height: 650px;
+    border-radius: 20px;
+}
+.Log-in i{
+    position: absolute;
+    right: 795px;
+    top: 300px;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.sign-up i{
+    position: absolute;
+    left: 780px;
+    top: 300px;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.home{
+    /* padding: 100%; */
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.568),rgba(0, 0, 0, 0.568)),
+    url('../Images/programming.avif');
+    /* opacity: 0.8; */
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    color: white;
+    background-attachment: fixed;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.home h1{
+    font-weight: 1000;
+    font-size: 50px;
+}
+.home p{
+    font-weight: 1000;
+}
+.home a{
+    padding: 10px;
+    background-color: #e5cfab;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+.home a:hover{
+    background-color: #d2ac6e00;
+    color: #e5cfab;
+}
+.navbarr{
+    background-color: #e5cfab !important;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbarr li{
+    margin-left: 35px;
+}
+.navbarr i{
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+    border-radius: 50%;
+}
+.Log-in input,.Log-in button{
+    width: 60%;
+    margin-top: 30px !important;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.Log-in h1, .sign-up h1{
+    margin-top: 50px;
+}
+.sub,.subb{
+    background-image: linear-gradient(to right, #B7A588 , #e5cfab);
+    border: 2px solid #B7A588 !important;
+}
+.sub:hover,.subb:hover{
+    background-image: linear-gradient(to right, white , white);
+    border: 2px solid #B7A588 !important;
+}
+.Log-in button{
+    background-color: white;
+    border: 2px solid #B7A588 !important;
+}
+.Log-in button:hover{
+    background-image: linear-gradient(to right, #B7A588 , #e5cfab);
+    border: 2px solid #B7A588 !important;
+}
+.sign-up button{
+    background-color: white;
+    border: 2px solid #B7A588 !important;
+    width: 80%;
+    border-radius: 10px;
+}
+.sign-up button:hover{
+    background-image: linear-gradient(to right, #B7A588 , #e5cfab);
+    border: 2px solid #d2ac6e !important;
+}
+.sign-up input, .sign-up select, .inp{
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
