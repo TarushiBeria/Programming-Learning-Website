@@ -1,0 +1,282 @@
+<?php
+  session_start();
+  if($_SESSION['email'] != "manoj.beria183@nmims.edu.in"){
+    header("location: homee.php");
+  }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<style>
+body{
+    background-color: #e5cfab;
+    font-family: monospace;
+}
+textarea{
+    width: 100% !important;
+}
+.input{
+    background-color: white;
+}
+select,.img,textarea{
+    border: 0px;
+}
+select{
+    width: 100%;
+}
+.selectt{
+    width: 49.5%;
+}
+.textt{
+    width: 99.5% !important;
+}
+select,input,textarea{
+    margin-top: 0.5%;
+    height: 90%;
+}
+.subb input{
+    width: 101% !important;
+    background-color: gray;
+    border: none;
+}
+#name,#phone,#f_name,#m_name,#DOB,#email,#edu{
+    width: 100%;
+    height: 90%;
+    border: none;
+}
+.subb{
+    width: 101.5% !important;
+}
+.subb button{
+    border: 0px !important;
+    background-color: gray;
+    color: white;
+}
+.subb button:hover{
+    border: 0px !important;
+    background-color: white;
+    color: gray;
+}
+.navbarr{
+    background-color: #e5cfab !important;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbarr li{
+    margin-left: 35px;
+}
+.selecttt{
+  width: 99.7%;
+}
+.selectt input{
+  height: 90%;
+}
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light navbarr">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CodeFair</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="homee.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="our_courses.php">Our Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.php">FAQ</a>
+          </li>
+          <?php
+            if($_SESSION['st_id']!=-1){
+              echo'<li class="nav-item">';
+                echo'<a class="nav-link" href="certificates.php">My Certificates</a>';
+              echo'</li>';
+              echo'<li class="nav-item">';
+                echo'<a class="nav-link" href="result.php">My Result</a>';
+              echo'</li>';     
+            }
+            else{
+              echo'<li class="nav-item">';
+                echo'<a class="nav-link" href="show_result.php">Show Result</a>';
+              echo'</li>';  
+            }
+            if($_SESSION['email'] == "manoj.beria183@nmims.edu.in"){
+              echo'<li class="nav-item active">';
+                echo'<a class="nav-link active" href="add_staff.php">Add Staff</a>';
+              echo'</li>';
+              echo'<li class="nav-item">';
+                echo'<a class="nav-link" href="courses_report.php">Courses Report</a>';
+              echo'</li>';
+            }
+          ?>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container formm">
+    <h5 class="my-3">Add Staff</h5>
+    <form action="functions.php" method="post" onsubmit="return formValidator()">
+    <div class="row mb-2">
+        <div class="col-6 input selectt">
+          <input type="text" id="name" name="name" class="ps-2 py-5" placeholder="Name" required>
+        </div>
+        <div class="col-6 input selectt ms-2">
+            <input type="number" id="phone" name="phone" class="ps-2" placeholder="Phone number" required>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-6 input selectt">
+          <input type="text" id="f_name" class="ps-2 py-5" name="f_name" placeholder="Father's Name" required>
+        </div>
+        <div class="col-6 input selectt ms-2">
+            <input type="text" id="m_name" class="ps-2 py-5" name="m_name" placeholder="Mother's Name" required>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-6 input selectt" name="date">
+          <input type="date" id="DOB" name="date" class="ps-2 py-5" placeholder="Father's Name" required>
+        </div>
+        <div class="col-6 input selectt ms-2">
+            <select name="gender" id="gender">
+              <option value="">Select the Gender</option>
+              <option value="F">Female</option>
+              <option value="M">Male</option>
+              <option value="O">Others</option>
+            </select>
+          </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-6 input selectt">
+          <input type="email" id="email" name="email" class="ps-2 py-5" placeholder="Email" required>
+        </div>
+        <div class="col-6 input selectt ms-2">
+            <select name="country" id="nationality">
+              <option value="">Select the nationality</option>
+              <option value="India">India</option>
+              <option value="US">US</option>
+              <option value="UK">UK</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-12 input selecttt">
+          <input type="text" name="edu" placeholder="Education Qualification" id="edu"  class="ps-2 py-5" empty>
+        </div>
+        <!-- <div class="col-12">
+          <input type="text" id="edu" placeholder="Email" required>
+        </div> -->
+    </div>
+      <div class="row subb mt-2">
+        <button type="submit" class="py-2" name="add_staff">Add Staff</button>
+      </div>
+    </form>
+  </div>
+</body>
+<script>
+  function formValidator(){
+
+    const password = Math.random().toString(36).substring(2,7);
+    // alert(password);
+
+    var name = document.getElementById("name");
+    var phone = document.getElementById("phone");
+    var f_name = document.getElementById("f_name");
+    var m_name = document.getElementById("m_name");
+    var dob = document.getElementById("DOB");
+    var gender = document.getElementById("gender");
+    var email = document.getElementById("email");
+    var nationality = document.getElementById("nationality");
+
+    if(isAlpha(name, "Please enter the correct name")){
+      if(isPhone(phone, "Please enter the correct phone")){
+        if(isAlpha(f_name, "Please enter the correct father's name")){
+          if(isAlpha(m_name, "Please enter the correct mother's name")){
+            if(corr(dob, "Please enter the age above 18 years")){
+              if(sel(gender, "Please select the gender")){
+                if(isEmail(email, "Please enter the correct email")){
+                  if(sel(nationality, "Please select the nationality")){
+                    return true;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return false;
+
+    function isAlpha(elem,helperMsg){
+        var alphaExp = /^[A-Z][a-z]* [A-Z][a-z]*( [A-Z])?$/;
+        if(elem.value.match(alphaExp)){
+          return true;
+        }else{
+          alert(helperMsg);
+          elem.focus();
+          return false;
+        }
+    }
+
+    function isPhone(elem,helperMsg){
+      if(elem.value.length == 10){
+        return true;
+      }
+      else{
+        alert(helperMsg);
+        elem.focus();
+        return false;
+      }
+    }
+
+    function sel(elem,helperMsg){
+      if(elem.value == ""){
+        alert(helperMsg);
+        elem.focus();
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+
+    function isEmail(elem, helperMsg){
+      var emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(elem.value.match(emailExp)){
+        return true;
+      }else{
+        alert(helperMsg);
+        elem.focus();
+        return false;
+      }
+    }
+
+    function corr(elem,helperMsg){
+      const date = new Date(elem.value);
+      const curr = new Date();
+
+      if(curr.getFullYear() - date.getFullYear() > 18){
+        return true;
+      }
+      else if((curr.getFullYear() - date.getFullYear()) == 18 && (curr.getMonth()>=date.getMonth())){
+        return true;
+      }
+      else{
+        alert(helperMsg);
+        elem.focus();
+        return false;
+      }
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,212 @@
+<?php
+  session_start();
+  if($_SESSION['s_id']==-1 && $_SESSION['st_id']==-1){
+    header("location: Log_In.php");
+  }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<style>
+  .navbarr{
+    background-color: #e5cfab !important;
+  }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light navbarr">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CodeFair</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="homee.php">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="our_courses.php">Our Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.php">FAQ</a>
+              </li>
+              <?php
+                if($_SESSION['st_id']!=-1){
+                  echo'<li class="nav-item">';
+                    echo'<a class="nav-link" href="certificates.php">My Certificates</a>';
+                  echo'</li>';
+                  echo'<li class="nav-item">';
+                    echo'<a class="nav-link" href="result.php">My Result</a>';
+                  echo'</li>';     
+                }
+                else{
+                  echo'<li class="nav-item">';
+                    echo'<a class="nav-link" href="show_result.php">Show Result</a>';
+                  echo'</li>';  
+                }
+                if($_SESSION['email'] == "manoj.beria183@nmims.edu.in"){
+                  echo'<li class="nav-item">';
+                    echo'<a class="nav-link" href="add_staff.php">Add Staff</a>';
+                  echo'</li>';
+                  echo'<li class="nav-item">';
+                    echo'<a class="nav-link" href="courses_report.php">Courses Report</a>';
+                  echo'</li>';
+                }
+              ?>
+            </ul>
+            <a href="Log_In.php"><i class="fa-solid fa-user-plus"></i></a>
+          </div>
+        </div>
+      </nav>
+    <div class="container-fluid home">
+        <div class="mx-5 py-3">
+            <h1 class="mb-5">WE MAKE YOUR WORK SKILL<br> TO THE NEXT LEVEL</h1>
+            <!-- <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, dolor at! Fugit distinctio ratione.</p> -->
+            <a href="our_courses.php">OUR COURSES</a>
+        </div>
+    </div>
+    <div class="container">
+
+        <!-- Our Profile -->
+        <div class="row py-5">
+            <div class="col-xl-6 col-lg-6" id="img"></div>
+            <div class="col-xl-6 col-lg-6 px-4">
+                <h5>Our Profile</h5>
+                <p>At CodeFair, we believe that everyone has the potential to become a skilled programmer—whether you're just starting out or looking to level up your expertise. Our platform offers interactive learning experiences designed to help you not only understand coding but also to excel in it.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <h3><i class="fa-regular fa-eye"></i> Our Vision</h3>
+                        <p>To make high-quality programming education accessible to everyone.</p>
+                    </div>
+                    <div class="col-6">
+                        <h3><i class="fa-solid fa-bullseye"></i> Our Mision</h3>
+                        <p>Coding education that equips learners with the confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Service -->
+        <div class="py-5">
+            <div class="row">
+                <div class="col-xl-4 py-4">
+                    <h5>Our Service</h5>
+                    <h1>We Provide the Best Service</h1>
+                    <p>We offer interactive, expert-led coding courses to help learners build practical skills and achieve their tech goals.</p>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title py-2 text-center"><i class="fa-solid fa-headset"></i> Consultation</h3>
+                        <hr>
+                        <p class="card-text p-2">We provide personalized coding consultations to help with learning challenges, career planning, and project development. Our expert mentors guide you to overcome obstacles and accelerate your progress.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title py-2 text-center"><i class="fa-solid fa-chalkboard-user"></i> Experienced Coach</h3>
+                        <hr>
+                        <p class="card-text p-2">Our experienced coaches are industry professionals offering personalized guidance to help you master coding and reach your career goals. They share real-world insights and best practices to accelerate your learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title py-2 text-center"><i class="fa-regular fa-clock"></i> Flexible Time</h3>
+                        <hr>
+                        <p class="card-text p-2">Our platform offers flexible learning schedules, allowing you to study at your own pace and on your own time. Whether you're a full-time student or a working professional, you can learn coding whenever it suits you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title py-2 text-center"><i class="fa-solid fa-certificate"></i> Get Certificate</h3>
+                        <hr>
+                        <p class="card-text p-2">Upon completing our courses, you'll earn a certificate that highlights your coding skills and achievements. This certification boosts your professional profile and enhances your career prospects in the tech industry.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                        <h3 class="card-title py-2 text-center"><i class="fa-regular fa-handshake"></i> Get Job Quickly</h3>
+                        <hr>
+                        <p class="card-text p-2">Our courses are designed to equip you with the practical skills employers seek, helping you become job-ready quickly. With real-world projects and expert guidance, you’ll be prepared to land your dream job in tech.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- steps to join -->
+        <div class="row py-5">
+            <h5>How It Works</h5>
+            <h1>Steps for you to follow</h1>
+            <hr id="gold_hr">
+            <!-- <i class="fa-solid fa-circle circlee"></i>
+            <i class="fa-solid fa-circle circlee"></i>
+            <i class="fa-solid fa-circle circlee"></i>
+            <i class="fa-solid fa-circle circlee"></i> -->
+            <div class="col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                      <img src="Images/register.jpg" class="card_img">
+                      <h3 class="card-title py-2 text-center">Register</h3>
+                      <p class="card-text p-2 text-center">
+                        Log in or sign up to start coding today!
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                      <img src="Images/courses.avif" class="card_img">
+                      <h3 class="card-title py-2 text-center">Find Courses</h3>
+                      <p class="card-text p-2 text-center">
+                        Explore and find the perfect course for you.
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                      <img src="Images/programming.avif" class="card_img">
+                      <h3 class="card-title py-2 text-center">Practice</h3>
+                      <p class="card-text p-2 text-center">
+                        Practice coding to strengthen your skills and knowledge.
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                      <img src="Images/register.jpg" class="card_img">
+                      <h3 class="card-title py-2 text-center">Earn Certificates</h3>
+                      <p class="card-text p-2 text-center">
+                        Earn certificates to validate your skills and expertise.
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+</html>

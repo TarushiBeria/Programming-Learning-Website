@@ -1,0 +1,25 @@
+.question{
+    border-left: 5px solid #d2ac6e;
+}
+.answer{
+    border-left: 5px solid gray;
+}
+body{
+    font-family: monospace;
+}
+.text-danger{
+    color: #d2ac6e !important;
+}
+.navbarr{
+    background-color: #e5cfab !important;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbarr li{
+    margin-left: 35px;
+}
+*{
+    font-family: monospace;
+    font-size: 16px;
+}
